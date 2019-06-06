@@ -7,7 +7,13 @@ steps:
   args: ['install']
 - name: 'gcr.io/cloud-builders/mvn'
   id: 'SONAR'
-  args: ['sonar:sonar']    
+  args: 
+  - 'sonar:sonar'
+  - '-Dsonar.host.url=https://sonarcloud.io'
+  - '-Dsonar.login=a1395048df35e62623c804bcc8eff9b3e8b8234d'
+  - '-Dsonar.projectKey=sb-junit'
+  - '-Dsonar.organization=g33kzone'
+  - '-Dsonar.sources=.'
 - name: 'gcr.io/cloud-builders/docker'
   id: 'DOCKER'
   args: ['build', '--tag=gcr.io/$PROJECT_ID/$REPO_NAME:$SHORT_SHA', '.']

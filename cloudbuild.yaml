@@ -16,7 +16,7 @@ steps:
   args: ['build', '--tag=gcr.io/$PROJECT_ID/$REPO_NAME:$SHORT_SHA', '.']
 - name: 'gcr.io/cloud-builders/mvn'
   id: 'SONAR_SCANNER'
-  args: ['clean','package','sonar:sonar']
+  args: ['clean','package']
 - name: 'gcr.io/$PROJECT_ID/sonar-scanner:latest'
   id: 'SCANNER'
   args:

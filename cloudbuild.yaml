@@ -21,5 +21,5 @@ steps:
   - '-Dsonar.login=a1395048df35e62623c804bcc8eff9b3e8b8234d'
   - '-Dsonar.projectKey=sb-junit'
   - '-Dsonar.organization=g33kzone'
-  - '-Dsonar.sources=.'
+  - '-Dsonar.sources=/workspace/src/main/java'
 images: ['gcr.io/$PROJECT_ID/$REPO_NAME:$SHORT_SHA']

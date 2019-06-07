@@ -11,7 +11,7 @@ steps:
   - 'sonar:sonar'
   - '-Dsonar.host.url=https://sonarcloud.io'
   - '-Dsonar.login=54aaaafd6fe0efdb2f24d6cf130b8dab790db348'
-  - '-Dsonar.projectKey=sb-junit'
+  - '-Dsonar.projectKey=g33kzone_sb-junit'
   - '-Dsonar.organization=g33kzone'
   - '-Dsonar.sources=.'
 - name: 'gcr.io/cloud-builders/docker'
@@ -22,7 +22,7 @@ steps:
   args:
   - '-Dsonar.host.url=https://sonarcloud.io'
   - '-Dsonar.login=54aaaafd6fe0efdb2f24d6cf130b8dab790db348'
-  - '-Dsonar.projectKey=sb-junit'
+  - '-Dsonar.projectKey=g33kzone_sb-junit'
   - '-Dsonar.organization=g33kzone'
   - '-Dsonar.sources=/workspace/target'
 images: ['gcr.io/$PROJECT_ID/$REPO_NAME:$SHORT_SHA']

@@ -27,4 +27,7 @@ steps:
   - '-Dsonar.organization=g33kzone'
   - '-Dsonar.sources=/workspace/src/main/java'
   - '-Dsonar.java.binaries=//workspace/target'
+- name: 'ubuntu'
+  id: 'QUALITY GATE'
+  args: ['bash', './sonar-qg.sh', 'https://sonarcloud.io' ,'g33kzone_sb-junit']
 images: ['gcr.io/$PROJECT_ID/$REPO_NAME:$SHORT_SHA']

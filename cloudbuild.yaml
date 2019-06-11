@@ -4,7 +4,7 @@ steps:
   args: ['test']
 - name: 'gcr.io/cloud-builders/mvn'
   id: 'INSTALL'
-  args: ['install']
+  args: ['install','-Dmaven.test.skip=true']
 # - name: 'gcr.io/cloud-builders/mvn'
 #   id: 'SONAR'
 #   args: 

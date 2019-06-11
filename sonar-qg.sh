@@ -6,7 +6,8 @@ project_key=$2
 apt-get update -y
 apt-get install curl -y
 curl --version
-sudo apt-get install -y jq
+apt-get install -y jq
+jq --version
 
 ce_status=$(curl -s ${sonar_host_name}/api/qualitygates/project_status?projectKey=${project_key} | jq --raw-output '.projectStatus.status')
 

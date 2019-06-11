@@ -4,7 +4,7 @@ project_key=$2
 # sudo apt-get install jq
 
 apt-get update -y
-apt-get install curl
+apt-get install curl -y
 curl --version
 sudo apt-get install -y jq
 

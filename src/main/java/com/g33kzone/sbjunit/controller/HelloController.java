@@ -14,7 +14,7 @@ public class HelloController {
     @Autowired
     private HelloService helloService;
 
-    @GetMapping("/hello")
+    @GetMapping("/hellos")
     public String get(){
         return helloService.get();
     }
